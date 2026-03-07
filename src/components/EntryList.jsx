@@ -1,10 +1,15 @@
-function EntryList() {
-  return (
-    <div>
-      <h2>Entry List</h2>
-      <p>Logged entries will be displayed here.</p>
-    </div>
-  )
-}
+import EntryItem from "./EntryItem";
 
-export default EntryList
+export default function EntryList({ entries, onDelete }) {
+  if (entries.length === 0) {
+    return <p className="empty-state">No entries found.</p>;
+  }
+
+  return (
+    <div className="entry-list">
+      {entries.map((entry) => (
+        <EntryItem key={entry.id} entry={entry} onDelete={onDelete} />
+      ))}
+    </div>
+  );
+}
