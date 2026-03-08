@@ -1122,6 +1122,180 @@
   margin-bottom: 0.75rem;
 }
 
+/* ── Feeding reminder banner ──────────────────── */
+.feeding-reminder {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 4px solid #F2B8D9;
+  background: rgba(242, 184, 217, 0.12);
+  color: #3a3a3a;
+}
+
+.feeding-reminder--medium {
+  border-left-color: #f5a623;
+  background: rgba(245, 166, 35, 0.1);
+}
+
+.feeding-reminder--high {
+  border-left-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.08);
+}
+
+.feeding-reminder-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── Analytics grid ───────────────────────────── */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.analytics-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #e8dff5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.analytics-card--feeding { border-top-color: #B2FBA5; }
+.analytics-card--sleep   { border-top-color: #B6DDFD; }
+.analytics-card--diaper  { border-top-color: #FBF0A6; }
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.analytics-icon {
+  font-size: 1.2rem;
+}
+
+.analytics-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+/* ── Stat rows ────────────────────────────────── */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  color: #888;
+  white-space: nowrap;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: #3a3a3a;
+  text-align: right;
+}
+
+/* ── Ratio bar ────────────────────────────────── */
+.ratio-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #f0edf7;
+  margin-top: 0.25rem;
+}
+
+.ratio-bar--empty {
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #bbb;
+  height: 24px;
+  background: #f5f5f5;
+}
+
+.ratio-segment {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.ratio-legend {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #888;
+  flex-wrap: wrap;
+  margin-top: 0.1rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+/* ── Sleep bar chart ──────────────────────────── */
+.sleep-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.sleep-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.sleep-bar-label {
+  color: #aaa;
+  min-width: 48px;
+  text-align: right;
+}
+
+.sleep-bar-track {
+  flex: 1;
+  height: 8px;
+  background: #eef6ff;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.sleep-bar-fill {
+  height: 100%;
+  background: #B6DDFD;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.sleep-bar-val {
+  color: #555;
+  font-weight: 600;
+  min-width: 36px;
+}
+
 /* ── Responsive ───────────────────────────────── */
 @media (max-width: 768px) {
   .sidebar {
@@ -1134,6 +1308,10 @@
 
   .app-content {
     padding-bottom: 70px;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
   }
 }
 
