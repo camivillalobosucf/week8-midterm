@@ -21,7 +21,9 @@ export default function Sidebar() {
     <>
       {/* Desktop sidebar */}
       <aside className="sidebar">
-        <Link to="/dashboard" className="sidebar-brand">BabyTrack 👶</Link>
+        <Link to="/dashboard" className="sidebar-brand">
+          <img src="/logo-horizontal.png" alt="BabyTrack" className="sidebar-logo" />
+        </Link>
 
         <nav className="sidebar-nav">
           {NAV_ITEMS.map((item) => (

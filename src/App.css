@@ -10,6 +10,13 @@
   padding: 3rem 1rem 2rem;
 }
 
+.hero-logo {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
@@ -192,6 +199,12 @@
   padding: 0 0.25rem;
 }
 
+.sidebar-logo {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -339,6 +352,13 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 400px;
+}
+
+.auth-logo {
+  max-width: 160px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.25rem;
 }
 
 .auth-title {

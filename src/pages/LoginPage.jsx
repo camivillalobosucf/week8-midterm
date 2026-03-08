@@ -30,7 +30,7 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <h1 className="auth-title">BabyTrack 👶</h1>
+        <img src="/logo-stacked.png" alt="BabyTrack" className="auth-logo" />
         <h2 className="auth-subtitle">Welcome back</h2>
         {error && <p className="auth-error">{error}</p>}
         <form onSubmit={handleSubmit} className="auth-form">

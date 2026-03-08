@@ -14,9 +14,7 @@ export default function LandingPage() {
   return (
     <div className="landing">
       <header className="hero">
-        <h1 className="hero-title">
-          BabyTrack <span className="hero-emoji">👶</span>
-        </h1>
+        <img src="/logo-stacked.png" alt="BabyTrack" className="hero-logo" />
         <p className="hero-tagline">
           A simple web app that helps parents log feedings, diaper changes, and
           sleep — all in one place.
