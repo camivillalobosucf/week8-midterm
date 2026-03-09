@@ -1297,6 +1297,8 @@
 }
 
 /* ── Responsive ───────────────────────────────── */
+
+/* Tablet / large mobile — sidebar → bottom nav */
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -1307,21 +1309,47 @@
   }
 
   .app-content {
-    padding-bottom: 70px;
+    padding-bottom: 76px; /* clear fixed bottom nav */
   }
 
   .analytics-grid {
     grid-template-columns: 1fr;
   }
+
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  .page-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 }
 
+/* Small mobile — ≤ 600px */
 @media (max-width: 600px) {
+  /* Landing */
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .hero-logo {
+    max-width: 180px;
   }
 
   .hero-tagline {
     font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
   }
 
   .cards {
@@ -1332,29 +1360,42 @@
     padding: 1.5rem 1rem 2rem;
   }
 
-  .page {
-    padding: 1.5rem 1rem;
+  /* Auth */
+  .auth-card {
+    padding: 2rem 1.25rem;
   }
 
+  .auth-logo {
+    max-width: 130px;
+  }
+
+  /* Dashboard summary cards — stack vertically */
   .summary-grid {
+    grid-template-columns: 1fr;
     gap: 0.6rem;
   }
 
   .summary-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-    padding: 1rem 0.75rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
   }
 
   .summary-icon {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .summary-value {
     font-size: 1.6rem;
   }
 
+  /* Analytics cards */
+  .analytics-card {
+    padding: 1rem 0.9rem;
+  }
+
+  /* Entry form / list */
   .entry-actions {
     flex-direction: column;
   }
@@ -1369,6 +1410,7 @@
     width: 100%;
   }
 
+  /* Diary */
   .diary-footer {
     flex-direction: column;
     align-items: flex-start;
